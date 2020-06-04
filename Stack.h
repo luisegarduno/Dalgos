@@ -5,28 +5,22 @@
 #ifndef DATASTRUCTURES_STACK_H
 #define DATASTRUCTURES_STACK_H
 
-#include <iostream>
 #include "Node.h"
+#include <iostream>
 #include "LinkedList.h"
+#include "OUT_OF_BOUNDS.h"
 
 using std::cout;
 using std::endl;
 
-class OUT_OF_BOUNDS{
-public:
-    const char * what() {
-        return "OUT OF BOUNDS";
-    }
-};
-
 template<class T>
 class Stack{
-private:
-    LinkedList<T> stackData;
-    T top;
-    size_t stackSize;
+    private:
+        LinkedList<T> stackData;
+        T top;
+        size_t stackSize;
 
-public:
+    public:
     Stack();
     T pop();
     T peek();
@@ -82,7 +76,7 @@ size_t Stack<T>::sizeOfStack(){
 
 template<class T>
 bool Stack<T>::isEmpty(){                 // checks to see if DSLinkedList is empty
-    return ( (this->stackData.head == nullptr) ? true : false);
+    return this->stackData.head == nullptr;
 }
 
 #endif //DATASTRUCTURES_STACK_H
