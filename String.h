@@ -5,6 +5,7 @@
 #ifndef DATASTRUCTURES_STRING_H
 #define DATASTRUCTURES_STRING_H
 
+#include <cstring>
 #include <iostream>
 
 using std::cout;
