@@ -13,11 +13,7 @@ int main(){
     // Node
     // LinkedList
 
-    for(int i = 0; i <= 5; i++){
-	    if(i == 0){
-		    cout << "Hello Vim World!" << endl;
-	    }
-    } 
+     
 
     return 0;
 }
