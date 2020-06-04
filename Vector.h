@@ -5,4 +5,10 @@
 #ifndef DATASTRUCTURES_VECTOR_H
 #define DATASTRUCTURES_VECTOR_H
 
+class Vector{
+    public:
+
+    private:
+};
+
 #endif //DATASTRUCTURES_VECTOR_H

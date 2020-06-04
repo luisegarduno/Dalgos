@@ -5,9 +5,13 @@
 #ifndef DATASTRUCTURES_STRING_H
 #define DATASTRUCTURES_STRING_H
 
+#include <iostream>
 
 class String {
 
+    public:
+
+    private:
 };
 
 

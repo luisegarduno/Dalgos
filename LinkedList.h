@@ -5,4 +5,11 @@
 #ifndef DATASTRUCTURES_LINKEDLIST_H
 #define DATASTRUCTURES_LINKEDLIST_H
 
+class LinkedList{
+
+    public:
+
+    private:
+
+};
 #endif //DATASTRUCTURES_LINKEDLIST_H
