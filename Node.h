@@ -65,7 +65,7 @@ Node<T>::Node(const Node<T>& aData, Node<T>* aNext, Node<T>* aPrevious) :
 // Set current node data equal to x
 template<class T>
 void Node<T>::setData(T* x){
-    this->data = x;
+    this->data = *x;
 }
 
 // Get current node data

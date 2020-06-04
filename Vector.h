@@ -68,7 +68,7 @@ Vector<T>::Vector(int numOfElements){
 template<typename T>
 Vector<T>::Vector(const Vector<T>& originalVector){
     capacity = originalVector.capacity;               // copy originalVector capacity
-    sizeOfVector = originalVector.sizeOfDSVector;   // copy originalDSVector size
+    sizeOfVector = originalVector.sizeOfVector;   // copy originalDSVector size
     this->data = new T[capacity];                       // dynamically allocate data
 
     for(int i = 0; i < capacity; i++){

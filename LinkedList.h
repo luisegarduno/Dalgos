@@ -43,6 +43,8 @@ class LinkedList{
         void popLastNode();
 
         T getAt(T);                     // returns element at specific index
+        T popFirstNode();
+        void pushToFront(T);
         LinkedList<T>& operator=(const LinkedList<T>&);
 
         bool operator!=(const LinkedList<T>&) const;
@@ -140,6 +142,21 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>& v2LinkedList) {
     }
 
     return *this;
+}
+
+template<class T>
+T LinkedList<T>::popFirstNode(){
+    T temp = *(head->getData());
+    head = head->getNextNode();
+    return temp;
+}
+
+template<class T>
+void LinkedList<T>::pushToFront(T x){
+    Node<T>* newNode = new Node<T>();
+    newNode->setData(&x);
+    newNode->setNextNode(head);
+    head = newNode;
 }
 
 template<class T>
@@ -383,14 +400,14 @@ void LinkedList<T>::printMatrix_ToFile(fstream& fout, int x){
 
 template<class T>
 void LinkedList<T>::remove(Node<T>* iteratorNode){
-    Node<T>* nextNode = iteratorNode->next;
-    Node<T>* previousNode = iteratorNode->previous;
+    Node<T>* nextNode = iteratorNode->getNextNode();
+    Node<T>* previousNode = iteratorNode->getPreviousNode();
 
     if (nextNode != nullptr) {
-        nextNode->previous = previousNode;
+        nextNode->setPreviousNode(previousNode);
     }
     if (previousNode != nullptr) {
-        previousNode->next = nextNode;
+        previousNode->setNextNode(nextNode);
     }
     if (iteratorNode == head) {
         head = nextNode;                    // deletes head and new head is declared
@@ -420,10 +437,10 @@ T LinkedList<T>::getAt(T x){
         Node<T>* aCurrent = head;           // begin at head
 
         for(int i = 0; i < x; i++){
-            aCurrent = aCurrent->next;      // cycle through Linked List
+            aCurrent = aCurrent->getNextNode();      // cycle through Linked List
         }
 
-        return aCurrent->data;              // return element from linked list (specified in parameter
+        return *(aCurrent->getData());              // return element from linked list (specified in parameter
     }
 }
 

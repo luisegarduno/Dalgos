@@ -6,7 +6,7 @@
 
 
 String::String() {
-    cout << "Default constructor" << endl;
+    //cout << "Default constructor" << endl;
 
     this->data = new char[1];
     this->data[0] = '\0';
@@ -20,7 +20,7 @@ String::String(const char * originalChar){
 }
 
 String::String(const String & originalString){
-    cout << "Copy constructor" << endl;
+    //cout << "Copy constructor" << endl;
 
     this->data = new char[strlen(originalString.data) + 1];
     strcpy(this->data, originalString.data);
@@ -28,7 +28,7 @@ String::String(const String & originalString){
 }
 
 String::~String(){
-    cout << "Default destructor" << endl;
+    //cout << "Default destructor" << endl;
 
     if(this->data != nullptr){
         delete [] this->data;

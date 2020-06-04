@@ -40,8 +40,8 @@ T Stack<T>::pop(){
     T returnValue;
     if(!isEmpty()) {
         returnValue = stackData.popFirstNode();
-        if(stackData.head != 0){
-            top = stackData.head->getData();
+        if(stackData.getLinkedList_head() != 0){
+            top = *(stackData.getLinkedList_head()->getData());
         }
         return returnValue;
     }                             // returns stored data1
@@ -76,7 +76,7 @@ size_t Stack<T>::sizeOfStack(){
 
 template<class T>
 bool Stack<T>::isEmpty(){                 // checks to see if DSLinkedList is empty
-    return this->stackData.head == nullptr;
+    return this->stackData.getLinkedList_head() == nullptr;
 }
 
 #endif //DATASTRUCTURES_STACK_H
