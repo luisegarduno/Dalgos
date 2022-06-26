@@ -1,9 +1,12 @@
-//
-// Created by Luis on 6/4/2020.
-//
+/*
+ * Dalgos v1.0.0
+ * Updated: 2022-06-24
+ * --------------------------------------------
+ * Created by Luis on 2020-06-04.
+ */
 
-#ifndef DATASTRUCTURES_STACK_H
-#define DATASTRUCTURES_STACK_H
+#ifndef DS_STACK_H
+#define DS_STACK_H
 
 #include "Node.h"
 #include <iostream>
@@ -79,4 +82,4 @@ bool Stack<T>::isEmpty(){                 // checks to see if DSLinkedList is em
     return this->stackData.getLinkedList_head() == nullptr;
 }
 
-#endif //DATASTRUCTURES_STACK_H
+#endif // DS_STACK_H

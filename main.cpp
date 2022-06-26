@@ -1,7 +1,9 @@
-//
-// Created by Luis on 6/4/2020.
-//
-
+/*
+ * Dalgos v1.0.0
+ * Updated: 2022-06-24
+ * --------------------------------------------
+ * Created by Luis on 2020-06-04.
+ */
 
 #define CATCH_CONFIG_RUNNER
 #include <iostream>

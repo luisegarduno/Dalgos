@@ -1,9 +1,12 @@
-//
-// Created by Luis on 6/4/2020.
-//
+/*
+ * Dalgos v1.0.0
+ * Updated: 2022-06-24
+ * --------------------------------------------
+ * Created by Luis on 2020-06-04.
+ */
 
-#ifndef DATASTRUCTURES_LINKEDLIST_H
-#define DATASTRUCTURES_LINKEDLIST_H
+#ifndef DS_LINKEDLIST_H
+#define DS_LINKEDLIST_H
 
 #include "Node.h"
 #include <iomanip>
@@ -523,4 +526,4 @@ LinkedList<T>::~LinkedList<T>(){
     clear();                                // call the clear member function to deconstruct elements from HEAP
 }
 
-#endif //DATASTRUCTURES_LINKEDLIST_H
+#endif //DS_LINKEDLIST_H

@@ -1,9 +1,12 @@
-//
-// Created by Luis on 6/4/2020.
-//
+/*
+ * Dalgos v1.0.0
+ * Updated: 2022-06-24
+ * --------------------------------------------
+ * Created by Luis on 2020-06-04.
+ */
 
-#ifndef DATASTRUCTURES_NODE_H
-#define DATASTRUCTURES_NODE_H
+#ifndef DS_NODE_H
+#define DS_NODE_H
 
 #include <iostream>
 
@@ -102,4 +105,4 @@ Node<T>* Node<T>::getPreviousNode(){
 template<class T>
 Node<T>::~Node<T>()= default;
 
-#endif //DATASTRUCTURES_NODE_H
+#endif //DS_NODE_H

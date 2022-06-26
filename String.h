@@ -1,9 +1,12 @@
-//
-// Created by Luis on 6/4/2020.
-//
+/*
+ * Dalgos v1.0.0
+ * Updated: 2022-06-24
+ * --------------------------------------------
+ * Created by Luis on 2020-06-04.
+ */
 
-#ifndef DATASTRUCTURES_STRING_H
-#define DATASTRUCTURES_STRING_H
+#ifndef DS_STRING_H
+#define DS_STRING_H
 
 #include <cstring>
 #include <iostream>
@@ -60,4 +63,4 @@ class String {
 };
 
 
-#endif //DATASTRUCTURES_STRING_H
+#endif // DS_STRING_H
