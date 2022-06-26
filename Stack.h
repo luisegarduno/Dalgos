@@ -24,11 +24,11 @@ class Stack{
         size_t stackSize;
 
     public:
-    Stack();
-    T pop();
-    T peek();
-    void push(T);
-    bool isEmpty();
+        Stack();
+        T pop();
+        T peek();
+        void push(T);
+        bool isEmpty();
 
     T topValue();
     size_t sizeOfStack();

@@ -202,7 +202,7 @@ TEST_CASE( "Vector class 2", "<int>") {
 
 }
 
-TEST_CASE("Doubly Linked List", "LinkedLists<T>"){
+TEST_CASE("Doubly Linked List", "LinkedList<T>"){
     LinkedList<int> newList = LinkedList<int>();
 
     newList.append(2);
@@ -280,7 +280,7 @@ TEST_CASE("Doubly Linked List", "LinkedLists<T>"){
 
 
 
-TEST_CASE("Stack", "DSStack<int>"){
+TEST_CASE("Stack", "Stack<int>"){
     Stack<int> newVector;
 
     newVector.push(2);
