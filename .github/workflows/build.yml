@@ -4,20 +4,32 @@ on:
   push:
     branches: [master]
 
-env:
-  BUILD_TYPE: Release
-  EXE_NAME: DataTypes
-  INPUT_FILES:
-  OUTPUT_FILES:
-
 jobs:
   build:
-    name: Project_Building
-    runs-on: ubuntu-latest
+    name: ${{matrix.config.name}}
+    runs-on: ${{matrix.config.os}}
+    env:
+      BUILD_TYPE: Release
+      EXE_NAME: DataTypes
+      INPUT_FILES:
+      OUTPUT_FILES:
+      COMPILER: ${{matrix.config.compiler}}
+      COMP: ${{matrix.config.comp}}
+      CXXFLAGS: "-Werror"
     timeout-minutes: 3
+    strategy:
+      matrix:
+        config:
+          - {
+              name: "Ubuntu 20.04 GCC",
+              os: ubuntu-20.04,
+              compiler: g++,
+              comp: gcc,
+              shell: 'bash {0}'
+          }
     defaults:
       run:
-        shell: bash
+        shell: ${{matrix.config.shell}}
 
     steps:
 
@@ -26,13 +38,13 @@ jobs:
 
       - name: Executable name Environment Variable Check
         run: |
-          echo $EXE_NAME
+          echo ${{env.EXE_NAME}}
           echo " "
           echo ${{runner.workspace}}
           echo " "
           echo $GITHUB_WORKSPACE
           echo " "
-          g++ --version
+          $COMPILER --version
           cmake --version
 
       - name: Create build environment
@@ -44,7 +56,7 @@ jobs:
 
       - name: Build the project
         working-directory: ${{runner.workspace}}/build
-        run: cmake --build . --config ${{env.BUILD_TYPE}}
+        run: cmake --build . --config $BUILD_TYPE
 
       - name: List contents of build directory
         run: ls -al ${{runner.workspace}}/build
