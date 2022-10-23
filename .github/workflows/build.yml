@@ -58,6 +58,10 @@ jobs:
         working-directory: ${{runner.workspace}}/build
         run: cmake --build . --config $BUILD_TYPE
 
+      - name: Test build
+        working-directory: ${{runner.workspace}}/build
+        run: make -j2 optimize=no debug=yes > /dev/null
+
       - name: List contents of build directory
         run: ls -al ${{runner.workspace}}/build
         
